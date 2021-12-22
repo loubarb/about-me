@@ -97,40 +97,102 @@ textarea {
 
 
 html {
-  background: url(../img/retro-circuit.png) no-repeat center center fixed;
+  background: url(../img/abstract-colors.jpg) no-repeat center center fixed;
   height: 100%;
+  width: 100%;
 }
 
 body {
   font-family: 'Lora', sans-serif;
-  padding: 2em;
+  padding: 0 2em;
   font-size: 1.25em;
   height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+header, main {
+    border-bottom: 2px solid #fff;
+    background: rgb(0, 0, 0, 0.75);
+}
+
+header, footer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+header h1 {
+    font-size: 2em;
+}
+
+span {
+    font-family: 'Lora', sans-serif;
+    color: aquamarine;
+    text-transform: uppercase;
+    font-size: 1em;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+main h2 {
+    font-size: 1.25em;
+}
+
+header, footer, main {
+    color: #fff;
+    display: flex;
+    align-items: center;
 }
 
 .wrapper {
-  /*add display:flex and set justify-content to space-between*/
   font-weight: 700;
   display: flex;
   justify-content: space-between;
+  flex-flow: row wrap;
+  align-items: center;
+
 }
 
 .div-1, .div-2, .div-3 {
-  /*give the divs a width of 30%, add display:flex, set justify-content and align-items to center*/
+  display: flex;
   color: #fff;
   background: rgb(0, 0, 0, 0.75);
   line-height: 1.5em;
   font-size: 1.25em;
   text-align: center;
-  border-radius: 10px;
-  height: 350px;
-  display: flex;
-  width: 25%;
   justify-content: center;
   align-items: center;
+  border-bottom: 2px solid #fff;
 }
 
+p {
+    font-size: 0.75em;
+}
 
+ul {
+    list-style-type: none;
+}
+
+li {
+    display: inline;
+    padding: 0 20px;
+}
+
+li a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Lora', sans-serif;
+}
+
+li a:hover {
+    text-transform: lowercase;
+    font-style: italic;
+}
 
 
 /* ==========================================================================
@@ -212,6 +274,18 @@ body {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+
+@media all and (max-width: 768px) {
+    body {
+        padding: 1em;
+    }
+}
+
+@media (min-width: 1200px) {
+    .div-1, .div-2, .div-3 {
+        flex-basis: 30%;
+    }
+}
 
 @media print,
        (-webkit-min-device-pixel-ratio: 1.25),
