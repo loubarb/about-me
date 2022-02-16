@@ -122,6 +122,10 @@ header, footer {
     justify-content: flex-start;
 }
 
+footer {
+  justify-content: center;
+}
+
 header h1 {
     font-size: 2em;
 }
@@ -174,8 +178,19 @@ p {
     font-size: 0.75em;
 }
 
+a {
+  color: aquamarine;
+  text-decoration: none;
+}
+
+a:hover {
+  font-style: italic;
+}
+
 ul {
     list-style-type: none;
+    text-align: center;
+    padding-left: 0;
 }
 
 li {
